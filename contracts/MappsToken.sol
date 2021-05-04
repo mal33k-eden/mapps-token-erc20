@@ -10,10 +10,16 @@ contract MappsToken {
 
     uint256 public totalSupply;
     mapping(address => uint256) public balanceOf;
+    mapping(address=> mapping(address=>uint256)) public allowance;
 
     event Transfer(
         address indexed _from,
         address indexed _to, 
+        uint256 _value
+    );
+    event Approval(
+        address indexed _owner,
+        address indexed _spender, 
         uint256 _value
     );
 
@@ -37,9 +43,18 @@ contract MappsToken {
         balanceOf[_to] += _value;
         //trigger transfer the event even if transfer is zero
         emit Transfer(msg.sender, _to, _value);
-        
         return true;
     }
+    //approve transaction through exchange or thirdp
+    function approve(address _spender, uint256 _value) public returns (bool success){
+        
+        allowance[msg.sender][_spender] = _value;
+        //approve event 
+        emit Approval(msg.sender, _spender, _value);
+      return true;
+    }
+    //Delegate the Transfer 
+    
 
 
 }
