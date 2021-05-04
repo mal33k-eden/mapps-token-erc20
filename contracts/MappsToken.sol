@@ -11,6 +11,11 @@ contract MappsToken {
     uint256 public totalSupply;
     mapping(address => uint256) public balanceOf;
 
+    event Transfer(
+        address indexed _from,
+        address indexed _to, 
+        uint256 _value
+    );
 
     constructor() public{
         //totalSuPPLY IS A STATE VARIABLE : MEANING AVAILABLE THROUGHOUT THE CONTRACT 
@@ -21,6 +26,20 @@ contract MappsToken {
         totalSupply  = 10000000;
         //allocate the total supply to the admins wallet
         balanceOf[msg.sender] = totalSupply; 
-
     }
+
+    //transfer MAAPS TOKEN
+    function transfer(address _to, uint256 _value) public returns (bool success){
+        // Exception if account does not have enouch balance 
+        require(balanceOf[msg.sender] >= _value);
+        //transfer the balance 
+        balanceOf[msg.sender]  -= _value;
+        balanceOf[_to] += _value;
+        //trigger transfer the event even if transfer is zero
+        emit Transfer(msg.sender, _to, _value);
+        
+        return true;
+    }
+
+
 }
