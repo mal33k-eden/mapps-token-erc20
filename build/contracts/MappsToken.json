@@ -19,11 +19,18 @@
       "stateMutability": "view",
       "type": "function",
       "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "_setTotalSupply",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/mapps/dApps/token1/contracts/MappsToken.sol\":\"MappsToken\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/mapps/dApps/token1/contracts/MappsToken.sol\":{\"keccak256\":\"0x3b06216f3765969d1405f0b81205bc4428b3e9272315625990c7fa71be4b713c\",\"urls\":[\"bzz-raw://969a3f607238c292accc623f429fa8fb52cc40f05a8ddfeec33f67a51fe5c7a4\",\"dweb:/ipfs/QmNdihoDwd3ncmauCyzoWYxjqAT6VowLwXNuJRG5GW985s\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506298968060008190555060b3806100296000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806318160ddd14602d575b600080fd5b60336047565b604051603e9190605a565b60405180910390f35b60005481565b6054816073565b82525050565b6000602082019050606d6000830184604d565b92915050565b600081905091905056fea26469706673582212200a88041ea38da7013344c98e3f7945981aee635fe735fedf6ed4a1c67989249c64736f6c63430008040033",
-  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c806318160ddd14602d575b600080fd5b60336047565b604051603e9190605a565b60405180910390f35b60005481565b6054816073565b82525050565b6000602082019050606d6000830184604d565b92915050565b600081905091905056fea26469706673582212200a88041ea38da7013344c98e3f7945981aee635fe735fedf6ed4a1c67989249c64736f6c63430008040033",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"_setTotalSupply\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/mapps/dApps/token1/contracts/MappsToken.sol\":\"MappsToken\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/mapps/dApps/token1/contracts/MappsToken.sol\":{\"keccak256\":\"0xd9b41fdb3a308603956dcb6f4ce5e595cc69945480ee1ef8c73e691f2aef8fbc\",\"urls\":[\"bzz-raw://2742927302361b3e373db8d4405afc49a37a54d881740af16e6f90d78fa6c8d9\",\"dweb:/ipfs/QmZNwHXLTzQ2kNfmobegTcnqFezwLDjaefjTGyiJtazWjJ\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061001f61002460201b60201c565b610030565b62989680600081905550565b60d18061003e6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806318160ddd146037578063a60b1561146051575b600080fd5b603d6059565b604051604891906078565b60405180910390f35b6057605f565b005b60005481565b62989680600081905550565b6072816091565b82525050565b6000602082019050608b6000830184606b565b92915050565b600081905091905056fea264697066735822122015e057de3ed36fc21f31870a82c555d490b68daa5b56ad2e4eb93e0487a28ad964736f6c63430008040033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c806318160ddd146037578063a60b1561146051575b600080fd5b603d6059565b604051604891906078565b60405180910390f35b6057605f565b005b60005481565b62989680600081905550565b6072816091565b82525050565b6000602082019050608b6000830184606b565b92915050565b600081905091905056fea264697066735822122015e057de3ed36fc21f31870a82c555d490b68daa5b56ad2e4eb93e0487a28ad964736f6c63430008040033",
   "immutableReferences": {},
   "generatedSources": [],
   "deployedGeneratedSources": [
@@ -254,18 +261,18 @@
       "name": "#utility.yul"
     }
   ],
-  "sourceMap": "23:307:0:-:0;;;181:147;;;;;;;;;;312:8;298:11;:22;;;;23:307;;;;;;",
-  "deployedSourceMap": "23:307:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;148:26;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;;;;;:::o;7:118:1:-;94:24;112:5;94:24;:::i;:::-;89:3;82:37;72:53;;:::o;131:222::-;224:4;262:2;251:9;247:18;239:26;;275:71;343:1;332:9;328:17;319:6;275:71;:::i;:::-;229:124;;;;:::o;359:77::-;396:7;425:5;414:16;;404:32;;;:::o",
-  "source": "pragma solidity ^0.8;\n\ncontract MappsToken {\n    // Constructor \n    // set the total number of tokens\n    // read the total numbe rof tokens \n\n    uint256 public totalSupply;\n\n    constructor() public{\n        //totalSuPPLY IS A STATE VARIABLE : MEANING AVAILABLE THROUGHOUT THE CONTRACT \n        totalSupply = 10000000;\n\n    }\n}",
+  "sourceMap": "23:381:0:-:0;;;181:142;;;;;;;;;;299:17;:15;;;:17;;:::i;:::-;23:381;;329:73;387:8;372:11;:23;;;;329:73::o;23:381::-;;;;;;;",
+  "deployedSourceMap": "23:381:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;148:26;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;329:73;;;:::i;:::-;;148:26;;;;:::o;329:73::-;387:8;372:11;:23;;;;329:73::o;7:118:1:-;94:24;112:5;94:24;:::i;:::-;89:3;82:37;72:53;;:::o;131:222::-;224:4;262:2;251:9;247:18;239:26;;275:71;343:1;332:9;328:17;319:6;275:71;:::i;:::-;229:124;;;;:::o;359:77::-;396:7;425:5;414:16;;404:32;;;:::o",
+  "source": "pragma solidity ^0.8;\n\ncontract MappsToken {\n    // Constructor \n    // set the total number of tokens\n    // read the total numbe rof tokens \n\n    uint256 public totalSupply;\n\n    constructor() public{\n        //totalSuPPLY IS A STATE VARIABLE : MEANING AVAILABLE THROUGHOUT THE CONTRACT \n         _setTotalSupply();\n    }\n\n    function _setTotalSupply() public{\n        totalSupply  = 10000000;\n    }\n}",
   "sourcePath": "/Users/mapps/dApps/token1/contracts/MappsToken.sol",
   "ast": {
     "absolutePath": "/Users/mapps/dApps/token1/contracts/MappsToken.sol",
     "exportedSymbols": {
       "MappsToken": [
-        12
+        19
       ]
     },
-    "id": 13,
+    "id": 20,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -284,9 +291,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 12,
+        "id": 19,
         "linearizedBaseContracts": [
-          12
+          19
         ],
         "name": "MappsToken",
         "nameLocation": "32:10:0",
@@ -300,7 +307,7 @@
             "name": "totalSupply",
             "nameLocation": "163:11:0",
             "nodeType": "VariableDeclaration",
-            "scope": 12,
+            "scope": 19,
             "src": "148:26:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -322,60 +329,48 @@
           },
           {
             "body": {
-              "id": 10,
+              "id": 9,
               "nodeType": "Block",
-              "src": "201:127:0",
+              "src": "201:122:0",
               "statements": [
                 {
                   "expression": {
-                    "id": 8,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 6,
+                      "name": "_setTotalSupply",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18,
+                      "src": "299:15:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 7,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
+                    "kind": "functionCall",
                     "lValueRequested": false,
-                    "leftHandSide": {
-                      "id": 6,
-                      "name": "totalSupply",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 3,
-                      "src": "298:11:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "hexValue": "3130303030303030",
-                      "id": 7,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": true,
-                      "kind": "number",
-                      "lValueRequested": false,
-                      "nodeType": "Literal",
-                      "src": "312:8:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_rational_10000000_by_1",
-                        "typeString": "int_const 10000000"
-                      },
-                      "value": "10000000"
-                    },
-                    "src": "298:22:0",
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "299:17:0",
+                    "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
                     }
                   },
-                  "id": 9,
+                  "id": 8,
                   "nodeType": "ExpressionStatement",
-                  "src": "298:22:0"
+                  "src": "299:17:0"
                 }
               ]
             },
-            "id": 11,
+            "id": 10,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
@@ -394,28 +389,109 @@
               "parameters": [],
               "src": "201:0:0"
             },
-            "scope": 12,
-            "src": "181:147:0",
+            "scope": 19,
+            "src": "181:142:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 17,
+              "nodeType": "Block",
+              "src": "362:40:0",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 15,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 13,
+                      "name": "totalSupply",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "372:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "3130303030303030",
+                      "id": 14,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "387:8:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_10000000_by_1",
+                        "typeString": "int_const 10000000"
+                      },
+                      "value": "10000000"
+                    },
+                    "src": "372:23:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 16,
+                  "nodeType": "ExpressionStatement",
+                  "src": "372:23:0"
+                }
+              ]
+            },
+            "functionSelector": "a60b1561",
+            "id": 18,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_setTotalSupply",
+            "nameLocation": "338:15:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "353:2:0"
+            },
+            "returnParameters": {
+              "id": 12,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "362:0:0"
+            },
+            "scope": 19,
+            "src": "329:73:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 13,
-        "src": "23:307:0",
+        "scope": 20,
+        "src": "23:381:0",
         "usedErrors": []
       }
     ],
-    "src": "0:330:0"
+    "src": "0:404:0"
   },
   "legacyAST": {
     "absolutePath": "/Users/mapps/dApps/token1/contracts/MappsToken.sol",
     "exportedSymbols": {
       "MappsToken": [
-        12
+        19
       ]
     },
-    "id": 13,
+    "id": 20,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -434,9 +510,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 12,
+        "id": 19,
         "linearizedBaseContracts": [
-          12
+          19
         ],
         "name": "MappsToken",
         "nameLocation": "32:10:0",
@@ -450,7 +526,7 @@
             "name": "totalSupply",
             "nameLocation": "163:11:0",
             "nodeType": "VariableDeclaration",
-            "scope": 12,
+            "scope": 19,
             "src": "148:26:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -472,60 +548,48 @@
           },
           {
             "body": {
-              "id": 10,
+              "id": 9,
               "nodeType": "Block",
-              "src": "201:127:0",
+              "src": "201:122:0",
               "statements": [
                 {
                   "expression": {
-                    "id": 8,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 6,
+                      "name": "_setTotalSupply",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18,
+                      "src": "299:15:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 7,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
+                    "kind": "functionCall",
                     "lValueRequested": false,
-                    "leftHandSide": {
-                      "id": 6,
-                      "name": "totalSupply",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 3,
-                      "src": "298:11:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "hexValue": "3130303030303030",
-                      "id": 7,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": true,
-                      "kind": "number",
-                      "lValueRequested": false,
-                      "nodeType": "Literal",
-                      "src": "312:8:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_rational_10000000_by_1",
-                        "typeString": "int_const 10000000"
-                      },
-                      "value": "10000000"
-                    },
-                    "src": "298:22:0",
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "299:17:0",
+                    "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
                     }
                   },
-                  "id": 9,
+                  "id": 8,
                   "nodeType": "ExpressionStatement",
-                  "src": "298:22:0"
+                  "src": "299:17:0"
                 }
               ]
             },
-            "id": 11,
+            "id": 10,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
@@ -544,19 +608,100 @@
               "parameters": [],
               "src": "201:0:0"
             },
-            "scope": 12,
-            "src": "181:147:0",
+            "scope": 19,
+            "src": "181:142:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 17,
+              "nodeType": "Block",
+              "src": "362:40:0",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 15,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 13,
+                      "name": "totalSupply",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "372:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "3130303030303030",
+                      "id": 14,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "387:8:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_10000000_by_1",
+                        "typeString": "int_const 10000000"
+                      },
+                      "value": "10000000"
+                    },
+                    "src": "372:23:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 16,
+                  "nodeType": "ExpressionStatement",
+                  "src": "372:23:0"
+                }
+              ]
+            },
+            "functionSelector": "a60b1561",
+            "id": 18,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_setTotalSupply",
+            "nameLocation": "338:15:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "353:2:0"
+            },
+            "returnParameters": {
+              "id": 12,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "362:0:0"
+            },
+            "scope": 19,
+            "src": "329:73:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 13,
-        "src": "23:307:0",
+        "scope": 20,
+        "src": "23:381:0",
         "usedErrors": []
       }
     ],
-    "src": "0:330:0"
+    "src": "0:404:0"
   },
   "compiler": {
     "name": "solc",
@@ -566,12 +711,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xd2aB6cf5812f0d837c60732D625E755C81EDB6dF",
-      "transactionHash": "0xb1b65fb62397724ec414f667dc0468988a15f04c0fbbeed5a3ffd7e065ee14d9"
+      "address": "0x8270B34557213A3245D5d907bF2Ba4AC8a656838",
+      "transactionHash": "0xd44be4f7b0e231cc8548f118ff968a27b73b45e5a7fc8c0d4926b9b5b4953509"
     }
   },
   "schemaVersion": "3.4.0",
-  "updatedAt": "2021-05-04T09:28:38.810Z",
+  "updatedAt": "2021-05-04T10:23:24.236Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
