@@ -3,7 +3,7 @@ pragma solidity ^0.8;
 import "./MappsToken.sol";
 
 contract MappsTokenSale{
-    address admin;
+    address  admin;
     MappsToken public tokenContract;
     uint256 public tokenPrice;
     uint256 public tokensSold;
@@ -38,9 +38,27 @@ contract MappsTokenSale{
         tokensSold += _numberOfTokens;
         // emit the sell event 
         emit Sell(msg.sender, _numberOfTokens);
+    }
+    //End the token sale 
+    function endSale() public {
+        // Require admin 
+        require(msg.sender == admin);
+        //transfer remaining dapp tokens to admin 
+        require(tokenContract.transfer(admin, tokenContract.balanceOf(address(this))));
+        // destroy contract 
+        shutdownICO();
 
+
+        // UPDATE: Let's not destroy the contract here
+        // Just transfer the balance to the admin
+        //admin.transfer(address(this).balance);
 
     }
 
+    /// destroy the contract and reclaim the leftover funds.
+    function shutdownICO() public {
+        require(msg.sender == admin);
+        selfdestruct(payable(msg.sender));
+    }
 
 }
