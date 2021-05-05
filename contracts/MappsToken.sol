@@ -53,7 +53,25 @@ contract MappsToken {
         emit Approval(msg.sender, _spender, _value);
       return true;
     }
-    //Delegate the Transfer 
+
+    //transfer from 
+    function transferFrom(address _from, address _to, uint256 _value) public returns (bool success){
+        //three accounts used here. 1- the account that is calling the function, -2 the account to transfer from -3 and trhe account to transfer to 
+        
+        // require _from has enough tokens 
+        require(_value <= balanceOf[_from]);
+        // require  allowance  is big enough 
+        require(_value <= allowance[_from][msg.sender]);
+        // change the balance 
+        balanceOf[_from] -= _value;
+        balanceOf[_to]   += _value;
+        // update the allowance 
+        allowance[_from][msg.sender] -= _value;
+        // trigger transfer event 
+        emit Transfer(_from, _to, _value);
+        //return a boolean
+        return true;
+    }
     
 
 
