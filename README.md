@@ -13,7 +13,11 @@ Build, Deploy and Test Contract
 -Ropsten
 
 #Contracts
+
 #-Token Conract 
+
 Handles the provisioning and disbursment of tokens
+
 #-Token Sale Contract 
+
 Allows for IDO, provisions contract wallet and destroys contract at the end of IDO
